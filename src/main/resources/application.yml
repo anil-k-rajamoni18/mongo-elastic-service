@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: mongo-elastic-service
+#  data:
+#    mongodb:
+#      uri: mongodb://<username>:<password>@<host1>:27017,<host2>:27017,<host3>:27017/<dbName>?replicaSet=<replicaSet>
+
+elasticsearch:
+  host: <elasticsearch-host>
+  port: 9200
+  password: <elasticsearch-password>
+  username: <elasticsearch-username>
+  maxRetryTimeout: 1800000
+
+timeout: 80
+async.timeout: 600000
+
+database:
+  mongodb:
+    reports-hub:
+      dbName: <dbName>
+      username: <username>
+      password: <password>
+      authDBName: <authDBName>
+      hosts:
+        - <host1>
+        - <host2>
+        - <host3>
+      replicaSet: <replicaSet>
+      connectionTimeOutSec: 3000
+      readPreference: primary
